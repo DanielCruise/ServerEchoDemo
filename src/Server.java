@@ -7,7 +7,9 @@ import java.util.Scanner;
 public class Server {
 	public static void main(String args[]) throws IOException {
 		String greeting, temp;
+		// Create and register server at port 1342
 		ServerSocket s1 = new ServerSocket(1342);
+		// Ready for requests from client
 		Socket s = s1.accept();
 		Scanner sc = new Scanner(s.getInputStream());
 		greeting = sc.nextLine();
@@ -15,4 +17,4 @@ public class Server {
 		PrintStream p = new PrintStream(s.getOutputStream());
 		p.println(temp);
 	}
-}
+} // End class Server
