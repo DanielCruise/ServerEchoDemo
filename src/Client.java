@@ -14,9 +14,10 @@ public class Client {
 		Scanner sc1 = new Scanner(s.getInputStream());
 		// Return typed string
 		greeting = sc.nextLine();
+		// ????
 		PrintStream p = new PrintStream(s.getOutputStream());
 		p.println(greeting);
 		temp = sc1.nextLine();
 		System.out.println(temp);
 	}
-}
+} // End class Client

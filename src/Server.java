@@ -11,9 +11,11 @@ public class Server {
 		ServerSocket s1 = new ServerSocket(1342);
 		// Ready for requests from client
 		Socket s = s1.accept();
+		// Get input stream from client ?????
 		Scanner sc = new Scanner(s.getInputStream());
 		greeting = sc.nextLine();
 		temp = "Hi";
+		// Print response
 		PrintStream p = new PrintStream(s.getOutputStream());
 		p.println(temp);
 	}
